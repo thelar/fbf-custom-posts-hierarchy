@@ -3,9 +3,9 @@
 Plugin Name: Custom Posts Hierarchy
 Plugin URI:
 Description: Add page attributes to posts and support hiearchichal
-Author: Angela Murrell
-Version:
-Author URI:
+Author: Kevin Price-Ward
+Version: 1.0.0
+Author URI: https://4x4tyres.co.uk
 */
 
 
