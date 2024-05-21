@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Custom Posts Hierarchy
+Plugin Name: 4x4 Custom Posts Hierarchy
 Plugin URI:
 Description: Add page attributes to posts and support hiearchichal
 Author: Kevin Price-Ward
