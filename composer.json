@@ -1,0 +1,18 @@
+{
+  "name": "thelar/fbf-custom-posts-hierarchy",
+  "description": "",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "https://github.com/thelar/fbf-custom-posts-hierarchy",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kevin Price-Ward",
+      "email": "kevin.price-ward@4x4tyres.co.uk",
+      "homepage": ""
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.4"
+  }
+}
