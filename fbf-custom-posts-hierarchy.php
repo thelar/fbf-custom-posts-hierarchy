@@ -185,18 +185,18 @@ function get_post_from_uri($uri)
         $d = $c;
         $p = $c + 1;
 
-        $pre = "select d${d}.*, p${p}.post_name as p${p}_slug, p${p}.post_parent as p${p}_parent from (";
-        $suf = ") as d${d} left join $wpdb->posts p${p} on p${p}.id = d${d}.p${c}_parent";
+        $pre = "select d{$d}.*, p{$p}.post_name as p{$p}_slug, p{$p}.post_parent as p{$p}_parent from (";
+        $suf = ") as d{$d} left join $wpdb->posts p{$p} on p{$p}.id = d{$d}.p{$c}_parent";
 
         $sql = $pre . $sql . $suf;
 
-        $concats[] = sprintf("IFNULL(p${p}_slug,'')");
+        $concats[] = sprintf("IFNULL(p$p}_slug,'')");
     }
 
     $trimmedUri = trim($uri, '/');
     $concatSql = implode(", '/',", array_reverse($concats));
     $finalSql = "select * from (select TRIM(BOTH '/' FROM
-    concat($concatSql)) as slug, id from ($sql) as d${c}) as all_slugs
+    concat($concatSql)) as slug, id from ($sql) as d{$c}) as all_slugs
     where slug = '$trimmedUri';";
 
     $result = $wpdb->get_results($finalSql);
