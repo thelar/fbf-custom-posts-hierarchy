@@ -190,7 +190,7 @@ function get_post_from_uri($uri)
 
         $sql = $pre . $sql . $suf;
 
-        $concats[] = sprintf("IFNULL(p$p}_slug,'')");
+        $concats[] = sprintf("IFNULL(p{$p}_slug,'')");
     }
 
     $trimmedUri = trim($uri, '/');
