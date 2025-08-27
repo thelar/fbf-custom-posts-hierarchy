@@ -92,8 +92,8 @@ add_action('pre_get_posts', function ($query) {
     global $wp_query;
 
     $original_query = $query;
-    $uri_with_query_string = $_SERVER['REQUEST_URI'];
-    $query_string = $_SERVER['QUERY_STRING'];
+    $uri_with_query_string = $_SERVER['REQUEST_URI']??'';
+    $query_string = $_SERVER['QUERY_STRING']??'';
     $uri = str_replace('?' . $query_string, '', $uri_with_query_string);
 
     // Do not do this post check all the time
